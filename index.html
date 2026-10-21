@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f2e9">
+  <meta name="description" content="Discover Kenyan home cooking by Faith. Browse the menu, find your favorite, and place an order request.">
+  <title>KITCHEN kenya with Faith | A taste of home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Kitchen Kenya with Faith, home">
+      <span class="brand-mark" aria-hidden="true">K<span>.</span></span>
+      <span class="brand-name">KITCHEN <span>kenya</span><small>with Faith</small></span>
+    </a>
+    <nav class="header-nav" aria-label="Main navigation">
+      <a href="#menu">The menu</a>
+      <a href="#story">Our kitchen</a>
+    </nav>
+    <button class="area-button" id="open-area" type="button" aria-label="Set delivery area">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M19 10.1c0 5.2-7 11-7 11s-7-5.8-7-11a7 7 0 1 1 14 0Z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2.2" stroke="currentColor" stroke-width="1.6"/></svg>
+      <span><small>YOUR AREA</small><strong id="area-label">Set ZIP</strong></span>
+    </button>
+    <button class="cart-button" id="open-cart" type="button" aria-label="Open shopping bag">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 8h14l1 12H4L5 8Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M9 9V6a3 3 0 0 1 6 0v3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <span>Bag</span><span class="cart-count" id="cart-count" aria-live="polite">0</span>
+    </button>
+  </header>
+
+  <main id="home">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span> Kenyan comfort, made with love</p>
+        <h1 id="hero-title">A little taste<br>of <em>home.</em></h1>
+        <p class="hero-description">From Faith's kitchen to your table. Slow-cooked favorites, family recipes, and the kind of food that brings everyone a little closer.</p>
+        <a class="primary-button" href="#menu">Find your favorite <span aria-hidden="true">↘</span></a>
+        <div class="hero-note"><span class="note-star" aria-hidden="true">✳</span><span><strong>Made by Faith</strong><br>Rooted in Kenya. Cooked in the USA.</span></div>
+      </div>
+      <div class="hero-visual">
+        <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1400&q=85" alt="A colorful, freshly prepared meal served family style">
+        <span class="image-stamp"><span>FROM<br>FAITH'S<br>KITCHEN</span><span class="stamp-flower" aria-hidden="true">✳</span></span>
+        <span class="hero-caption">Good food. Good company. Always.</span>
+      </div>
+      <div class="hero-index" aria-hidden="true">01 / MADE WITH HEART</div>
+    </section>
+
+    <section class="menu-section" id="menu" aria-labelledby="menu-title">
+      <div class="section-heading">
+        <div><p class="eyebrow"><span class="eyebrow-line"></span> Straight from the kitchen</p><h2 id="menu-title">What's cooking<span class="heading-period">.</span></h2></div>
+        <p class="section-aside">Kenyan favorites, prepared fresh<br>and ready to make your day.</p>
+      </div>
+
+      <div class="combo-banner">
+        <div class="combo-art" aria-hidden="true"><span>✳</span><span>FAITH'S<br>LUNCH SET</span></div>
+        <div class="combo-copy"><p class="combo-kicker">A little something together</p><h3>Pilau + Kenyan chai</h3><p>Chicken Pilau and a warm cup of chai, made for your lunch break.</p></div>
+        <div class="combo-price"><span class="old-price">$20.00</span><strong>$18.00</strong><small>Save $2.00</small></div>
+        <button class="combo-add" id="add-combo" type="button">Add lunch set <span aria-hidden="true">+</span></button>
+      </div>
+
+      <div class="menu-controls">
+        <div class="category-list" id="category-list" role="group" aria-label="Filter dishes by category">
+          <button class="category-button is-active" type="button" data-category="All">Everything <span id="dish-count">18</span></button>
+          <button class="category-button" type="button" data-category="Mains">Mains</button>
+          <button class="category-button" type="button" data-category="Snacks">Snacks</button>
+          <button class="category-button" type="button" data-category="Sides">Sides</button>
+          <button class="category-button" type="button" data-category="Drinks">Drinks</button>
+          <button class="category-button saved-filter" type="button" data-category="Saved"><span aria-hidden="true">♥</span> Saved</button>
+        </div>
+        <label class="search-box">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8" stroke="currentColor" stroke-width="1.7"/><path d="m16 16 4.2 4.2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+          <input id="menu-search" type="search" placeholder="Find a dish..." aria-label="Search dishes">
+          <kbd>/</kbd>
+        </label>
+      </div>
+
+      <div class="results-line"><p id="results-count" aria-live="polite">Showing all dishes</p><span>Prices in USD <span aria-hidden="true">·</span> made fresh</span></div>
+      <div class="menu-grid" id="menu-grid"></div>
+      <p class="empty-state" id="empty-state" hidden>No dishes found. Try another name or category.</p>
+    </section>
+
+    <section class="story-section" id="story" aria-labelledby="story-title">
+      <div class="story-image"><img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1100&q=85" alt="A home kitchen ready for cooking"></div>
+      <div class="story-copy"><p class="eyebrow"><span class="eyebrow-line"></span> The hands behind the food</p><h2 id="story-title">Welcome to<br>Faith's table.</h2><p>Some recipes are measured in handfuls, shared stories, and a little extra time at the stove. Faith brings the flavors she grew up with in Kenya to a kitchen in the States, one lovingly made plate at a time.</p><p class="story-signature">Karibu. You're always welcome here.</p><a href="#menu" class="text-link">Explore the menu <span aria-hidden="true">↗</span></a></div>
+      <span class="story-number" aria-hidden="true">02</span>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="footer-brand" href="#home">KITCHEN kenya <span>with Faith</span></a><p>Made with love, wherever home is.</p><a href="#menu">Back to the menu ↑</a></footer>
+
+  <div class="overlay" id="overlay" hidden></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-labelledby="cart-title" aria-modal="true" role="dialog" aria-hidden="true" inert>
+    <div class="drawer-header"><div><p class="eyebrow">A little something good</p><h2 id="cart-title">Your bag<span class="heading-period">.</span></h2></div><button class="icon-button" type="button" data-close aria-label="Close bag">×</button></div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-empty" id="cart-empty"><span class="empty-bowl" aria-hidden="true">♡</span><h3>Your bag is hungry.</h3><p>There's something lovely on the menu.</p><button class="text-link" id="keep-browsing" type="button">Take a look <span aria-hidden="true">↗</span></button></div>
+    <div class="cart-footer" id="cart-footer" hidden><div class="subtotal-row"><span>Subtotal</span><strong id="cart-subtotal">$0.00</strong></div><div class="discount-row" id="combo-discount-row" hidden><span>Lunch set savings</span><strong id="combo-discount">−$0.00</strong></div><div class="total-row"><span>Estimated total</span><strong id="cart-total">$0.00</strong></div><p class="checkout-note">Faith confirms delivery or pickup details with you.</p><button class="primary-button checkout-button" id="checkout-button" type="button">Continue to order <span aria-hidden="true">→</span></button></div>
+  </aside>
+
+  <section class="modal-shell area-modal" id="area-modal" role="dialog" aria-modal="true" aria-labelledby="area-title" aria-hidden="true" inert>
+    <button class="icon-button modal-close" type="button" data-close aria-label="Close delivery area form">×</button>
+    <div class="area-content"><span class="area-icon" aria-hidden="true">⌖</span><p class="eyebrow">A quick check-in</p><h2 id="area-title">Where should Faith's food find you<span class="heading-period">?</span></h2><p>Enter your US ZIP code to keep it handy for checkout. Faith will confirm delivery availability directly.</p><form id="area-form"><label for="area-zip">Your ZIP code</label><div class="area-input-row"><input id="area-zip" name="zip" inputmode="numeric" autocomplete="postal-code" required pattern="[0-9]{5}(-[0-9]{4})?" placeholder="e.g. 10001" title="Enter a valid US ZIP code"><button class="primary-button" type="submit">Save area <span aria-hidden="true">→</span></button></div></form><small class="area-disclaimer">ZIP is saved only in this browser. Delivery coverage is confirmed by Faith.</small></div>
+  </section>
+
+  <section class="modal-shell" id="detail-modal" role="dialog" aria-modal="true" aria-labelledby="detail-title" aria-hidden="true" inert>
+    <button class="icon-button modal-close" type="button" data-close aria-label="Close dish details">×</button>
+    <div id="detail-content"></div>
+  </section>
+
+  <section class="modal-shell checkout-modal" id="checkout-modal" role="dialog" aria-modal="true" aria-labelledby="checkout-title" aria-hidden="true" inert>
+    <button class="icon-button modal-close" type="button" data-close aria-label="Close order form">×</button>
+    <div class="checkout-content">
+      <p class="eyebrow">Just a few details</p><h2 id="checkout-title">Let's make it yours<span class="heading-period">.</span></h2>
+      <p class="checkout-intro">Send Faith your order request. She'll follow up to confirm availability, pickup or delivery, and payment.</p>
+      <form id="order-form">
+        <label>Your name<input name="name" autocomplete="name" required placeholder="Name" maxlength="80"></label>
+        <label>Email address<input name="email" type="email" autocomplete="email" required placeholder="you@example.com" maxlength="120"></label>
+        <label>ZIP code<input name="zip" inputmode="numeric" autocomplete="postal-code" required placeholder="Your ZIP code" pattern="[0-9]{5}(-[0-9]{4})?" title="Enter a valid US ZIP code"></label>
+        <label>Pickup or delivery<select name="fulfillment" required><option value="">Choose one</option><option>Pickup</option><option>Delivery (availability to be confirmed)</option></select></label>
+        <label class="full-field">A note for Faith <span class="optional">Optional</span><textarea name="notes" rows="3" maxlength="300" placeholder="Allergies, spice preferences, or anything else..."></textarea></label>
+        <div class="form-total"><span>Estimated total</span><strong id="checkout-subtotal">$0.00</strong></div>
+        <p class="demo-note">This is an order request, not a payment. Faith will confirm your order directly.</p>
+        <button class="primary-button checkout-button" type="submit">Send order request <span aria-hidden="true">→</span></button>
+      </form>
+    </div>
+  </section>
+
+  <section class="modal-shell confirmation-modal" id="confirmation-modal" role="dialog" aria-modal="true" aria-labelledby="confirmation-title" aria-hidden="true" inert>
+    <button class="icon-button modal-close" type="button" data-close aria-label="Close confirmation">×</button>
+    <div class="confirmation-content"><span class="confirmation-mark" aria-hidden="true">✓</span><p class="eyebrow">Order request ready</p><h2 id="confirmation-title">Thank you, <span id="customer-name">friend</span><span class="heading-period">.</span></h2><p>Your request <strong id="order-number"></strong> is saved for this demo. Faith will confirm the details with you directly once a kitchen contact method is connected.</p><div class="confirmation-total"><span>Estimated subtotal</span><strong id="confirmation-total">$0.00</strong></div><button class="primary-button" id="done-button" type="button">Back to the menu <span aria-hidden="true">↗</span></button></div>
+  </section>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
