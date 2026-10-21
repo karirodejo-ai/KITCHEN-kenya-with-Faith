@@ -153,9 +153,7 @@ function toggleFavorite(dishId) {
 }
 
 function updateAreaLabel() {
-  document.querySelector("#area-label").textContent = savedArea || "Set ZIP";
   document.querySelector("#hero-area-label").textContent = savedArea || "Add your ZIP code";
-  document.querySelector("#open-area").setAttribute("aria-label", savedArea ? `Delivery area ZIP ${savedArea}` : "Set delivery area");
 }
 
 function setOpen(element, open) {
@@ -216,8 +214,7 @@ categoryList.addEventListener("click", (event) => {
 
 searchInput.addEventListener("input", renderMenu);
 document.querySelector("#open-cart").addEventListener("click", openDrawer);
-document.querySelector("#hero-open-area").addEventListener("click", () => document.querySelector("#open-area").click());
-document.querySelector("#open-area").addEventListener("click", () => {
+document.querySelector("#hero-open-area").addEventListener("click", () => {
   document.querySelector("#area-zip").value = savedArea;
   openPanel(document.querySelector("#area-modal"));
 });
