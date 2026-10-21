@@ -16,7 +16,7 @@
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 88px; }
-body { margin: 0; background-color: var(--paper); background-image: linear-gradient(to bottom, rgba(23,25,22,.035) 0 30%, rgba(255,253,249,.35) 30% 35%, rgba(179,38,46,.035) 35% 65%, rgba(255,253,249,.35) 65% 70%, rgba(33,106,59,.04) 70% 100%); background-attachment: fixed; color: var(--ink); font-family: var(--body); font-size: 15px; -webkit-font-smoothing: antialiased; }
+body { margin: 0; background-color: #a95822; background-image: linear-gradient(to bottom, #0b828a 0%, #d2a04a 50%, #a95822 100%); background-attachment: fixed; color: var(--ink); font-family: var(--body); font-size: 15px; -webkit-font-smoothing: antialiased; }
 body.dialog-open { overflow: hidden; }
 button, input, select, textarea { font: inherit; }
 button, a { -webkit-tap-highlight-color: transparent; }
@@ -48,7 +48,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .cart-button svg, .search-box svg { width: 19px; height: 19px; }
 .cart-count { min-width: 26px; height: 26px; padding: 0 6px; display: inline-grid; place-items: center; border-radius: 50%; background: var(--green); color: white; font-size: 12px; font-weight: 700; }
 
-.hero { min-height: 540px; padding: 76px 7.1% 82px; position: relative; display: flex; align-items: center; overflow: hidden; background-color: var(--sun); background-image: linear-gradient(90deg, var(--sun) 0%, var(--sun) 40%, rgba(255,214,90,.97) 54%, rgba(255,214,90,.84) 70%, rgba(255,214,90,.54) 86%, rgba(255,214,90,.42) 100%), url("https://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Kenya.svg"); background-position: center, right center; background-size: 100% 100%, auto 100%; background-repeat: no-repeat; }
+.hero { min-height: 540px; padding: 76px 7.1% 82px; position: relative; display: flex; align-items: center; overflow: hidden; background-color: var(--sun); background-image: linear-gradient(90deg, var(--sun) 0%, var(--sun) 38%, rgba(255,214,90,.96) 52%, rgba(255,214,90,.8) 67%, rgba(255,214,90,.56) 82%, rgba(255,214,90,.78) 94%, var(--sun) 100%), url("https://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Kenya.svg"); background-position: center, calc(100% + 90px) center; background-size: 100% 100%, auto 100%; background-repeat: no-repeat; }
 .hero-copy { width: 100%; max-width: 690px; padding: 8px 0 4px; position: relative; z-index: 1; animation: enter-up .75s both; }
 .hero-kicker { margin: 0; display: flex; align-items: center; gap: 9px; color: #22251f; font-size: 11px; font-weight: 800; letter-spacing: .08em; animation: hero-content-in .48s .06s both; }
 .kicker-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); }
@@ -261,6 +261,7 @@ h1, h2, h3, p { margin-top: 0; }
   .cart-button svg { width: 20px; height: 20px; }
   .cart-count { min-width: 23px; height: 23px; font-size: 11px; }
   .hero { min-height: auto; padding: 49px 22px 54px; }
+  .hero { background-position: center, right 8px center; background-size: 100% 100%, auto 44%; }
   .hero-copy { max-width: 100%; }
   .hero h1 { margin-top: 18px; font-size: clamp(43px, 11.5vw, 57px); line-height: 1.04; }
   .hero-kicker { font-size: 9px; }
