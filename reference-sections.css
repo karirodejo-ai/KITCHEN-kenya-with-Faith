@@ -447,3 +447,11 @@
       #faf6ef 100%);
   }
 }
+
+
+/* Clear per-portion pricing on menu cards and dish detail dialogs */
+.dish-price-group,.detail-price-group{display:flex;flex-direction:column;align-items:flex-start;gap:3px;line-height:1.05;min-width:max-content}
+.price-unit{display:block;font-family:var(--font-body);font-size:.68rem;font-weight:600;letter-spacing:.01em;color:var(--muted);line-height:1.25;white-space:nowrap}
+.dish-price-group .dish-price{font-size:1.2rem}
+.detail-price-group .detail-price{font-size:1.55rem}
+@media(max-width:520px){.price-unit{font-size:.65rem}}

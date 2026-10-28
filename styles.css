@@ -716,7 +716,7 @@ body.no-scroll { overflow: hidden; }
 }
 
 /* Accessibility and content integration */
-.delivery-copy strong{color:var(--ink)}.hero-kicker{line-height:1.7}.story-copy .text-button{margin-top:1.5rem}.photo-credit{font-size:.65rem;color:var(--muted);padding:0 1.15rem .75rem}.photo-credit a{text-underline-offset:3px}.detail-modal>.modal-close{position:fixed;top:1rem;right:1rem}.demo-note{line-height:1.6}.area-input-row input{min-width:0}.ic{width:20px;height:20px}.drawer-header h2{font-size:2rem}.cart-drawer .drawer-header{padding:1.5rem}.checkout-note{line-height:1.7}.area-content .eyebrow-pill{color:var(--brand-deep)}
+.delivery-copy strong{color:var(--ink)}.hero-kicker{line-height:1.7}.story-copy .text-button{margin-top:1.5rem}detail-modal>.modal-close{position:fixed;top:1rem;right:1rem}.demo-note{line-height:1.6}.area-input-row input{min-width:0}.ic{width:20px;height:20px}.drawer-header h2{font-size:2rem}.cart-drawer .drawer-header{padding:1.5rem}.checkout-note{line-height:1.7}.area-content .eyebrow-pill{color:var(--brand-deep)}
 
 /* Family, gratitude and useful questions — aligned with Option B */
 .gather-section{padding:5rem 0;background:var(--cream)}
