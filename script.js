@@ -207,6 +207,7 @@
         '<div class="dish-foot"><div class="dish-price-group"><span class="dish-price">' + money(d.price) + '</span><small class="price-unit">per portion</small></div>' +
           '<button class="add-button" type="button" data-add="' + d.id + '">Add <span aria-hidden="true">+</span></button>' +
         '</div>' +
+        '<a class="call-order-link" href="tel:+18622163024" aria-label="Call Faith at 862-216-3024 to order ' + esc(d.name) + '"><span aria-hidden="true">☎</span><span>Call to order</span><strong>862-216-3024</strong></a>' +
       '</article>'
     );
   }
