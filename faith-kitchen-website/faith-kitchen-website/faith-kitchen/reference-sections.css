@@ -447,3 +447,20 @@
       #faf6ef 100%);
   }
 }
+
+
+/* Clear per-portion pricing on menu cards and dish detail dialogs */
+.dish-price-group,.detail-price-group{display:flex;flex-direction:column;align-items:flex-start;gap:3px;line-height:1.05;min-width:max-content}
+.price-unit{display:block;font-family:var(--font-body);font-size:.68rem;font-weight:600;letter-spacing:.01em;color:var(--muted);line-height:1.25;white-space:nowrap}
+.dish-price-group .dish-price{font-size:1.2rem}
+.detail-price-group .detail-price{font-size:1.55rem}
+@media(max-width:520px){.price-unit{font-size:.65rem}}
+
+
+/* Direct call-to-order action on each dish card */
+.call-order-link{display:flex;align-items:center;justify-content:center;gap:.48rem;margin:0 1.15rem 1.15rem;padding:.64rem .55rem;min-height:42px;border:1px solid rgba(30,92,79,.24);border-radius:999px;background:rgba(30,92,79,.055);color:var(--green);text-decoration:none;font-family:var(--font-body);font-size:.74rem;font-weight:700;line-height:1.2;white-space:nowrap;transition:background .2s ease,border-color .2s ease,transform .2s ease}
+.call-order-link>span:first-child{font-size:1rem;line-height:1}
+.call-order-link strong{font-size:.7rem;font-weight:800;color:var(--green);letter-spacing:.01em}
+.call-order-link:hover{background:rgba(30,92,79,.12);border-color:rgba(30,92,79,.42);transform:translateY(-1px)}
+.call-order-link:focus-visible{outline:3px solid rgba(30,92,79,.32);outline-offset:3px}
+@media(max-width:360px){.call-order-link{gap:.35rem;font-size:.7rem}.call-order-link strong{font-size:.66rem}}
